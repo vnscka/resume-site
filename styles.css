@@ -1,0 +1,97 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --header-bg: #222;
+  --header-text: #fff;
+  --link-color: #555;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --header-bg: #1e1e1e;
+  --header-text: #f0f0f0;
+  --link-color: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#theme-toggle {
+  background: transparent;
+  color: var(--header-text);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.contact a, .contact span {
+  display: inline-block;
+  margin: 0.3rem 0.5rem;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.resume-download {
+  font-weight: bold;
+  background: #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #222;
+  margin-top: 10px;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+section h2 {
+  border-bottom: 2px solid #444;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin: 0.5rem 0 0 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--header-bg);
+  color: var(--header-text);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
